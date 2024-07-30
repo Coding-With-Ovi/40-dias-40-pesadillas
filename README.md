@@ -16,6 +16,6 @@ Para la documentación usamos Markdown, el lenguaje de escritura que usan los fa
 
 ### Listado de proyecto
 
-* Generador de contraseñas
+* [Generador de contraseñas](https://github.com/Coding-With-Ovi/40-dias-40-pesadillas/tree/main/password_generator)
 * Tic Tac Toe
 
