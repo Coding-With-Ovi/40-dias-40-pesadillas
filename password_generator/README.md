@@ -45,7 +45,7 @@ Otra cosa a tener en cuenta es que la variable _string_pass_ no aparece ", ya qu
 
 Ahora bien con un poco de HTML, algo de CSS, un poco de Javascript (para llamar la sevidor), un mucho PHP tenemos un elegante generador de conraseñas.
 
-# [PROBAR AQUI](https://github.com/Coding-With-Ovi/40-dias-40-pesadillas)
+# [PROBAR AQUI](https://coding-with-ovi.github.io/40-dias-40-pesadillas/password_generator/)
 
 
 
