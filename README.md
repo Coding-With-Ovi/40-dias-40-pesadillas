@@ -1,4 +1,4 @@
-
+![Logo programa](https://github.com/user-attachments/assets/a1f38ded-3878-418a-bc09-9da611c065c9) 
 
 40 dias y 40 pesadillas, es un divertido programa, donde Diseñamos, Desarrollamos y Documentamos distintos proyectos web. Los proyectos son sencillos, lo suficiente para cubrir un video de media hora.
 
