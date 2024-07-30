@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Generador de contraseñas</title>
+</head>
+<body>
+	<main>
+		<div class="content">
+		<div class="form-content">
+			<form action="password_generator.php" id="passForm" method="POST">
+				<label for="passMax" class="pass-lenght">Tamaño de la contraseña
+				<input type="number" min=6 id=passMax name=passMax required value=6></label>
+				<label for="lowerCaseCheck" class="check-element">
+					<input type="checkbox" id=lowerCaseCheck name=lowerCaseCheck> Incluir minúsculas
+				</label>
+				<label for="upperCaseCheck" class="check-element">
+					<input type="checkbox" id=upperCaseCheck name=upperCaseCheck> Incluir mayúsculas
+				</label>
+				<label for="numbersCheck" class="check-element">
+					<input type="checkbox" id=numbersCheck name=numbersCheck> Incluir números
+				</label>
+				<label for="symbolCheck" class="check-element">
+					<input type="checkbox" id=symbolCheck name=symbolCheck> Incluir símbolos
+				</label>
+				<label for="repeatCheck" class="check-element">
+					<input type="checkbox" id=repeatCheck name=repeatCheck checked> Repetir caracteres
+				</label>
+				<input type="submit" value="Generar contraseña" class="btn">
+			</form>
+		</div>
+		
+		<p class="password" id="passwordResponse">Aquí aparece la contraseña</p>
+		</div>
+	</main>
+	
+</body>
+
+<script>
+	async function handleSubmit(event)
+	{
+		event.preventDefault();
+		let data = new FormData(event.target);
+		fetch(event.target.action,{
+			method: passForm.method,
+			body: data,
+			headers: {
+				"Accept" : "aplication/json"
+			}
+		}).then(response => {
+			if(response.ok){
+				response.json().then(data => {
+					passwordResponse.innerHTML = data.password;
+				})
+			} else {
+				response.json().then(data => {
+					alert(data.msg)
+				})
+			}
+		}).catch(error => {
+			console.log(error)
+		})
+	}
+
+	passForm.addEventListener("submit",handleSubmit);
+</script>
+</html>
