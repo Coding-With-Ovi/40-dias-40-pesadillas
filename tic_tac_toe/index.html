@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TIC TAC TOE</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main>
+		<h1>TIC TAC TOE</h1>
+		<div class="game-panel">
+			<div class="curtain" id="initialGame">
+				<button class="btn" onclick="startGame(1)">1 JUGADOR</button>
+				<button class="btn" onclick="startGame(2)">2 JUGADORES</button>
+			</div>
+
+			<div class="curtain hidden" id="curtain">
+				<p id="winnerBox">GANADOR:   <span id="winner"></span></p>
+				<button class="btn" onclick="return location.reload()">Otra partida</button>
+			</div>
+			<div class="game-row">
+				<div class="game-box" data-row=0 data-column=0></div>
+				<div class="game-box" data-row=0 data-column=1></div>
+				<div class="game-box" data-row=0 data-column=2></div>
+			</div>
+			<div class="game-row">
+				<div class="game-box" data-row=1 data-column=0></div>
+				<div class="game-box" data-row=1 data-column=1></div>
+				<div class="game-box" data-row=1 data-column=2></div>
+			</div>
+			<div class="game-row">
+				<div class="game-box" data-row=2 data-column=0></div>
+				<div class="game-box" data-row=2 data-column=1></div>
+				<div class="game-box" data-row=2 data-column=2></div>
+			</div>
+		</div>
+	</main>
+	
+</body>
+<script src="main.js"></script>	
+</html>
