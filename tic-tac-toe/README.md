@@ -9,7 +9,8 @@ Crear un juego de Tres en raya no ha sido una tarea fácil, bueno hacer un 1vs1 
 
 El diseño de juego es bien sencillo una cuadricula de 3x3 donde los símbolos de X o O, se van alternado hasta que un jugar gane, o se llene toda la cuadricula. Antes de empezar había que elegir la modalidad de juego, si un 1 jugador (jugar contra la maquina), o dos jugadores.
 
-![Frame 1](C:\Users\ovimax\Downloads\Frame 1.png)![Frame 2](C:\Users\ovimax\Downloads\Frame 2.png)
+![Frame 1](https://github.com/user-attachments/assets/f45dba08-c792-453a-a70a-0cc64bc5b530)
+![Frame 2](https://github.com/user-attachments/assets/ee60bcdd-be56-40d7-9a0a-181bb5336f6b)
 
 Quizás unas de cosas mas tediosas de este tipo de juego, es decir los que implican una cuadricula, es que tengas que verificar cada cuadricula y compararla con las demás para ver el resultado del juego, encima en este caso eso lo tienes que hacer siempre que se cambie el juego, es decir que cualquiera que marque una casilla con su símbolo. 
 
