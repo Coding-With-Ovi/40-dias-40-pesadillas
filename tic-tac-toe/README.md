@@ -13,7 +13,7 @@ El diseño de juego es bien sencillo una cuadricula de 3x3 donde los símbolos d
 
 Quizás unas de cosas mas tediosas de este tipo de juego, es decir los que implican una cuadricula, es que tengas que verificar cada cuadricula y compararla con las demás para ver el resultado del juego, encima en este caso eso lo tienes que hacer siempre que se cambie el juego, es decir que cualquiera que marque una casilla con su símbolo. 
 
-Adames para este juego había que mirar bien fila, columnas, diagonal principal, y diagonal segundaria. Asi que para facilitar las cosas creamos un array para cada tipo de situación, y al verificar las celdas en cada situación, en cuando se daba la coincidencia de tres simboles iguales, el juego presenta al ganador.
+Ademas para este juego había que mirar bien fila, columnas, diagonal principal, y diagonal segundaria. Asi que para facilitar las cosas creamos un array para cada tipo de situación, y al verificar las celdas en cada situación, en cuando se daba la coincidencia de tres simboles iguales, el juego presenta al ganador.
 
 ```javascript
 let matrix = [[0,0,0],[0,0,0],[0,0,0]]; //Fila
@@ -30,11 +30,23 @@ if(matrix[x].every((e)=>e==matrix[x][0]&&e!=0))
 }
 ```
 
-Para saber mas detalles del codigo y su desarrollo
+Ahora bien para saber quien es ganador, además de mirar cada fila, columna, diagonal, etc. había que mirar si había los mismo símbolos, para ello se ideo un sistema numérico bien sencillo:
 
-https://www.youtube.com/watch?v=oEfMwCs0-Sg
+* 0 - celda vacía
+* 1 - se marca con una cruz X
+* -1 - se marca con un circulo O
 
+Todo la información numérica se guardaba en los array antes mencionados, y asi es mas fáciles de comprobar, sobre todo para la maquina, que sigue el siguiente proceso para marcar una casilla. 
 
+​	Primero busca ganar es decir marcar un tres en raya.
+
+​	Segundo, si no puede ganar, bloquea cualquier movimiento del contrincante, es decir cualquier posible tres en raya. En el caso de haber dos posibilidades de bloqueo, se queda con la primera que encuentra.
+
+​	Tercero, si no hay nada que bloquear, marca la siguiente casilla vacía que encuentra.
+
+El proceso de la maquina es bien sencilla, y no aprende de cada jugada, no es una IA, es un simple codigo de JavaScript.
+
+Pon a prueba tus estrategia y reta a tus amigos, y si no tienes amigos, pues siempre tienes la maquina para ofrecer un buen desafío.
 
 # [PROBAR AQUI](https://codingwithovi.onsistems.com/40-dias-40-pesadillas/tic-tac-toe/)
 
