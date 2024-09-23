@@ -8,10 +8,10 @@ TIC TAC TOE, o como se le conoce en España, **Tres en raya**, es uno de esos ju
 Crear un juego de Tres en raya no ha sido una tarea fácil, bueno hacer un 1vs1 normal, es decir que jueguen dos personas reales, eso no tenia mucho misterio. El verdadero desafío era crear un algoritmo contra el cual una persona podría "competir". Es decir un 1vs1, pero contra la maquina.
 
 El diseño de juego es bien sencillo una cuadricula de 3x3 donde los símbolos de X o O, se van alternado hasta que un jugar gane, o se llene toda la cuadricula. Antes de empezar había que elegir la modalidad de juego, si un 1 jugador (jugar contra la maquina), o dos jugadores.
-
+<p align="center" width="100%">
 ![Frame 1](https://github.com/user-attachments/assets/f45dba08-c792-453a-a70a-0cc64bc5b530)
 ![Frame 2](https://github.com/user-attachments/assets/ee60bcdd-be56-40d7-9a0a-181bb5336f6b)
-
+</p>
 Quizás unas de cosas mas tediosas de este tipo de juego, es decir los que implican una cuadricula, es que tengas que verificar cada cuadricula y compararla con las demás para ver el resultado del juego, encima en este caso eso lo tienes que hacer siempre que se cambie el juego, es decir que cualquiera que marque una casilla con su símbolo. 
 
 Ademas para este juego había que mirar bien fila, columnas, diagonal principal, y diagonal segundaria. Asi que para facilitar las cosas creamos un array para cada tipo de situación, y al verificar las celdas en cada situación, en cuando se daba la coincidencia de tres simboles iguales, el juego presenta al ganador.
